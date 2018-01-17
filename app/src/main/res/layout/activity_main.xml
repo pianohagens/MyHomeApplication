@@ -4,15 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.piano.myhomeapplication.MainActivity">
 
     <TextView
-        android:layout_width="128dp"
-        android:layout_height="78dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/displyresult"
+        android:layout_width="208dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/showMyName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="164dp"
+        android:fontFamily="monospace"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/showMyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/showMyName"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/inputTxt"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="32dp"
+        android:text="Piano"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toEndOf="@+id/displyresult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displyresult" />
+
+    <EditText
+        android:id="@+id/inputTxt"
+        android:layout_width="227dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@+id/submitButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:hint="Enter favorite color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submitButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="32dp"
+        android:layout_toEndOf="@+id/inputTxt"
+        android:text="SUBMIT"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
